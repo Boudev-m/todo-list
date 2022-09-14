@@ -120,7 +120,7 @@ function deleteTask(item) {
 
 // Event pour supprimer toutes les tâches
 document.querySelector('.button-delete-all').addEventListener('click', function () {
-    if (window.confirm('Voulez-vous supprimer toutes des tâches ?')) {
+    if (window.confirm('Voulez-vous supprimer toutes les tâches ?')) {
         deleteAllTask();
     }
 });

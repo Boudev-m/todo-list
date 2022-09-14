@@ -118,6 +118,7 @@ h1 {
 
 .centered {
     justify-content: center;
+    text-align: center;
 }
 
 .animated {

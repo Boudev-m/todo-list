@@ -39,6 +39,7 @@ body {
 }
 
 h1 {
+    /* text-align: center; */
     padding: 0px 10px;
     margin: 0;
 }
@@ -116,26 +117,6 @@ h1 {
     color: #1b58a1;
 }
 
-.centered {
-    justify-content: center;
-}
-
-.animated {
-    animation-name: opaque;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes opaque {
-    50% {
-        opacity: 0.5
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .delete-button {
     height: 13px;
     min-width: 13px;
@@ -145,36 +126,4 @@ h1 {
 
 .delete-button:hover {
     background-color: #ff6666;
-}
-
-@media screen and (max-width: 1200px) {
-    .main-content {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 590px) {
-
-
-    .main-content {
-        width: 90%;
-        padding: 0em;
-        border-top-left-radius: 2em;
-        border-top-right-radius: 2em;
-    }
-
-    .title {
-        padding: 5px;
-    }
-
-    /* h1 {
-        padding: 0px 10px;
-        margin: 0;
-    } */
-
-    .tasks {
-        font-size: 1.2em;
-        padding: 10px;
-        margin-top: 1em;
-    }
 }

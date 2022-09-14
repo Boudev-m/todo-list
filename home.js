@@ -1,6 +1,6 @@
 // déclaration des constantes
 const tasksList = document.querySelector('.tasks');
-const noTaskMessage = '<p>Aucune tâche à faire pour le moment ...</p>';
+const noTaskMessage = '<p class="centered animated">Aucune tâche à faire pour le moment ...</p>';
 const inputTask = document.getElementsByClassName('input-task')[0];
 const buttonTask = document.getElementsByClassName('button-task')[0];
 document.getElementsByTagName('h1')[0].onclick = function (e) { console.log(e) }

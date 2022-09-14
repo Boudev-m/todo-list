@@ -12,17 +12,25 @@
 <body>
     <div class="page">
         <div class="main-content">
-            <h1>Todo List</h1>
+            <div class="title">
+                <img src="./todo_list_logo.png" alt="logo de l'application">
+                <h1>Todo List</h1>
+                <img src="./todo_list_logo.png" alt="logo de l'application">
+            </div>
+
             <div class="tasks">
+            </div>
+            <div class="container-button-delete-all">
+                <button type="submit" class="button-delete-all" hidden>Tout supprimer</button>
             </div>
             <div class="new-task">
                 <p>
                     Entrer une nouvelle tâche :
                 </p>
-                <div>
-                    <input class="input-task" placeholder="ex : laver la voiture">
-                    <button class="button-task">Valider</button>
-                </div>
+                <form id="taskForm">
+                    <label><input class="input-task" /></label>
+                    <button type="submit" class="button-task">Valider</button>
+                </form>
             </div>
         </div>
     </div>

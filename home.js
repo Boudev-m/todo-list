@@ -29,8 +29,8 @@ function showAllTasks(tasks) {
 
 // Affiche un exemple de tâche aléatoire dans input
 const exampleTask = [
-    'laver la voiture', 'faire les courses', 'faire du jogging', 'trier le courrier', 'appeler maman',
-    'faire le ménage', 'lire le journal', 'aller au parc', 'préparer le repas', 'réviser le cours'
+    'laver la voiture', 'faire les courses', 'faire du jogging', 'trier le courrier', 'faire le ménage',
+    'lire le journal', 'aller au parc', 'préparer le repas', 'réviser le cours'
 ]
 function showRandomTask() {
     const randomTask = "ex : " + exampleTask[Math.floor(Math.random() * exampleTask.length)];

@@ -8,7 +8,7 @@ L'application est visible sur [Github pages](https://bouimust.github.io/todo-lis
 `HTML` / `CSS` / `JS`  
 (Aucun framework)
 
-#### Fonctionnalités :
+#### Fonctionnalités de l'application :
 - créer une tâche
 - changer l'état d'une tâche (accomplie/non accomplie)
 - supprimer une tâche

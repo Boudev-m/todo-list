@@ -1,10 +1,9 @@
 body {
-    background-color: #ddd0ff;
+    background-color: #bdd4f0;
     font-family: 'Segoe UI', Verdana, sans-serif;
     font-weight: bold;
     margin: 0;
     padding: 0;
-    /* text-align: center; */
 }
 
 .page {
@@ -17,21 +16,61 @@ body {
     background-color: #fff;
     padding: 2em;
     border-radius: 1em;
-    color: #7944ff;
+    color: #3f7bc2;
+    /*code couleur prélevé du logo*/
     margin: auto;
 }
 
-h1 {
-    text-align: center;
-    border: 10px solid #ddd0ff;
+.title {
+    border: 10px solid #bdd4f0;
     border-radius: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /*centre le titre et logos horizontalement*/
+    justify-content: center;
+    /*centre le titre et logos verticalement*/
     padding: 10px;
+}
+
+.title img {
+    max-width: 40px;
+    /*l'image est grande de base, on met donc une limite*/
+}
+
+h1 {
+    /* text-align: center; */
+    padding: 0px 10px;
     margin: 0;
 }
 
 .tasks {
+    font-size: 1.2em;
     padding: 10px;
     margin-top: 1em;
+}
+
+/* .tasks p label:hover {
+    background-color: #e3ebf6;
+    le label doit occupé l'espace restante, mettre un :hover et background color pour chaque label
+} */
+
+.container-button-delete-all {
+    display: flex;
+
+}
+
+.button-delete-all {
+    margin: auto;
+    background-color: #ce0000;
+    opacity: 0.7;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.button-delete-all:hover {
+    opacity: 1;
 }
 
 .new-task {
@@ -42,17 +81,49 @@ h1 {
 .input-task {
     padding: 9px;
     border-radius: 10px;
-    background-color: #ddd0ff;
+    background-color: #bdd4f0;
 }
 
 .button-task {
-    background-color: #7944ff;
+    background-color: #1b58a1;
+    opacity: 0.8;
     color: #FFF;
     padding: 10px;
     border-radius: 10px;
 }
 
 .button-task:hover {
-    background-color: #692eff;
+    opacity: 1;
     cursor: pointer;
+}
+
+.checkbox:checked+label {
+    color: #CCC;
+    text-decoration: line-through;
+}
+
+.checkbox:checked+label:hover {
+    color: #AAA;
+}
+
+.tasks p {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    margin: 0;
+}
+
+.tasks p label:hover {
+    color: #1b58a1;
+}
+
+.delete-button {
+    height: 13px;
+    min-width: 13px;
+    background-color: #d00000;
+    border-radius: 2px;
+}
+
+.delete-button:hover {
+    background-color: #ff6666;
 }

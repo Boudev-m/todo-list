@@ -59,8 +59,8 @@ function addNewTask(task) {
     array.push(taskObject);                         // met objet dans array
     const newTask = document.createElement('p');    // créer <p>
     newTask.innerHTML = `<div class="delete-button"></div>
-        <input id=${Date.now()} class="checkbox" type="checkbox" />
-        <label for=${Date.now()}></label>`;       // met le checkbox et task name dedans
+    <input id=${taskObject.id} class="checkbox" type="checkbox" />
+    <label for=${taskObject.id}></label>`;       // met le checkbox et task name dedans
     newTask.lastChild.textContent = task;           // insère le texte brut dans le label
     newTask.firstChild.addEventListener('click', e => { deleteTask(e.target) });
     newTask.children[1].addEventListener('change', e => { changeStateTask(e.target) });
@@ -114,7 +114,7 @@ function deleteTask(item) {
     if (!tasksList.firstElementChild) {
         localStorage.removeItem('task');
         tasksList.innerHTML = noTaskMessage;
-        document.querySelector('.button-delete-all').setAttribute('hidden', true);
+        document.querySelector('.button-delete-all').setAttribute('hidden', '');
     }
 }
 
@@ -129,5 +129,5 @@ document.querySelector('.button-delete-all').addEventListener('click', function 
 function deleteAllTask() {
     localStorage.removeItem("task");
     tasksList.innerHTML = noTaskMessage;
-    document.querySelector('.button-delete-all').setAttribute('hidden', true);
+    document.querySelector('.button-delete-all').setAttribute('hidden', '');
 }

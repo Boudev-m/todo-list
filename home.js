@@ -1,3 +1,6 @@
+/*************  TO DO LIST  ***************/
+// L'application utilise le localStorage pour persister les données
+
 // déclaration des constantes
 const tasksList = document.querySelector('.tasks');
 const noTaskMessage = '<p class="centered animated">Aucune tâche à faire pour le moment ...</p>';

@@ -1,8 +1,8 @@
-### Todo List : Application de gestion des tâches
+### Application de gestion des tâches
 
 Ce projet a pour but de créer à l'intention de l'utilisateur une application qui va lui permettre de gérer les tâches du quotidien.  
   
-L'application est visible sur [Github pages](https://bouimust.github.io/todo-list/home.html).  
+**Lien vers l'app : https://bouimust.github.io/todo-list/home**
 
 **Langages utilisés** :
 ``HTML / CSS / Javascript``
@@ -18,4 +18,5 @@ L'application est visible sur [Github pages](https://bouimust.github.io/todo-lis
 - catégoriser les tâches : les tâches seront classées selon qu'elles soient personnelles ou professionnelles
 - date limite d'accomplissement d'une tâche (option facultative)
 
-![Image of todo list.](https://i.ibb.co/SNqYQbN/todolist.png "todo list")
+**Aperçu** :
+<img src="https://i.ibb.co/SNqYQbN/todolist.png" width="500px">

@@ -18,5 +18,5 @@ Ce projet a pour but de créer à l'intention de l'utilisateur une application q
 - catégoriser les tâches : les tâches seront classées selon qu'elles soient personnelles ou professionnelles
 - date limite d'accomplissement d'une tâche (option facultative)
 
-**Aperçu** :
+**Aperçu** :  
 <img src="https://i.ibb.co/SNqYQbN/todolist.png" width="500px">

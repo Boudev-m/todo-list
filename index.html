@@ -7,17 +7,34 @@
     <link rel="icon" type="image/png" href="./favicon.png" />
     <!--pour github pages-->
     <link rel="shortcut icon" type="image/x-icon" href="https://bouimust.github.io/todo-list/favicon.png" />
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- My Tailwind custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sky: '#bdd4f0',
+                        blue: '#3f7bc2'
+                    },
+                    borderWidth: {
+                        '10': '10px'
+                    }
+                }
+            }
+        }
+    </script>
     <!-- <link rel="stylesheet" href="./home.css" /> -->
     <title>Todo List</title>
 </head>
 
-<body>
-    <div class="page">
-        <div class="main-content">
-            <div class="flex">
-                <img src="./todo_list_logo.png" alt="logo de l'application">
-                <h1 class='text-3xl font-bold underline'>Todo List</h1>
+<body class="bg-sky font-sans font-bold m-0 p-0">
+    <div class="flex">
+        <div class="bg-slate-100 text-blue w-1/2 p-6 rounded-2xl m-auto">
+            <div class="flex flex-wrap items-center justify-center border-10 border-sky rounded-2xl p-3">
+                <img class='max-w-xs' src="./todo_list_logo.png" alt="logo de l'application">
+                <h1 class='text-3xl font-bold underline text-blue'>Todo List</h1>
                 <img src="./todo_list_logo.png" alt="logo de l'application">
             </div>
 

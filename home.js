@@ -3,7 +3,7 @@
 
 // déclaration des constantes
 const tasksList = document.querySelector('.tasks');
-const noTaskMessage = '<p class="centered animated">Aucune tâche à faire pour le moment ...</p>';
+const noTaskMessage = '<p class="justify-center text-center font-bold py-1.5 hover:bg-slate-300 transition duration-150"><span class="animate-pulse">Aucune tâche à faire pour le moment ...</span></p>';
 const inputTask = document.getElementsByClassName('input-task')[0];
 const buttonTask = document.getElementsByClassName('button-task')[0];
 
@@ -20,13 +20,15 @@ if (!localStorage.task) {
 // Affiche la liste des tâches
 function showAllTasks(tasks) {
     for (let i = 0; i < tasks.length; i++) {
-        const task = document.createElement('p');    // créer <p>
-        task.innerHTML = `<div class="delete-button"></div>
-        <input id=${tasks[i].id} class="checkbox" type="checkbox" ${tasks[i].isDone ? "checked" : ""} />
-        <label for=${tasks[i].id}>${tasks[i].name}</label>`;            // met le task name dedans
-        tasksList.appendChild(task);                 // ajoute <p> dans la liste
+        const task = document.createElement('p');                       // créer <p>
+        task.innerHTML = `<button type="submit" class="delete-button bg-red text-slate-200 text-sm m-auto opacity-70 rounded-md pb-0.5 px-1 hover:text-white hover:opacity-100 transition duration-300">Supprimer</button>
+        <input id=${tasks[i].id} class="checkbox h-6 w-6 rounded-full shadow cursor-pointer focus:ring-0" type="checkbox" ${tasks[i].isDone ? "checked" : ""} />
+        <label for=${tasks[i].id} class='break-words cursor-pointer'>${tasks[i].name}</label>`;            // met le task name dedans
+        task.classList.add('m-0', 'pb-1', 'pt-1', 'px-2', 'hover:bg-slate-300', 'transition', 'duration-150', 'cursor-default', 'md:pb-2');
+        task.querySelector('input').checked ? task.querySelector('label').classList.add('text-slate-400', 'line-through') : '';
+        tasksList.appendChild(task);                                    // ajoute <p> dans la liste
     }
-    document.querySelector('.button-delete-all').removeAttribute('hidden');
+    document.querySelector('.button-delete-all').classList.remove('invisible');
 }
 
 
@@ -61,9 +63,10 @@ function addNewTask(task) {
     }
     array.push(taskObject);                         // met objet dans array
     const newTask = document.createElement('p');    // créer <p>
-    newTask.innerHTML = `<div class="delete-button"></div>
-    <input id=${taskObject.id} class="checkbox" type="checkbox" />
-    <label for=${taskObject.id}></label>`;       // met le checkbox et task name dedans
+    newTask.classList.add('m-0', 'pb-2', 'pt-1', 'px-2', 'hover:bg-slate-300', 'transition', 'duration-150', 'cursor-default');
+    newTask.innerHTML = `<button type="submit" class="delete-button bg-red text-slate-200 text-sm m-auto opacity-70 rounded-md pb-0.5 px-1 hover:text-white hover:opacity-100 transition duration-300">Supprimer</button>
+    <input id=${taskObject.id} class="checkbox h-6 w-6 rounded-full shadow cursor-pointer focus:ring-0" type="checkbox" />
+    <label for=${taskObject.id} class='break-words cursor-pointer'></label>`;       // met le checkbox et task name dedans
     newTask.lastChild.textContent = task;           // insère le texte brut dans le label
     newTask.firstChild.addEventListener('click', e => { deleteTask(e.target) });
     newTask.children[1].addEventListener('change', e => { changeStateTask(e.target) });
@@ -72,7 +75,8 @@ function addNewTask(task) {
     localStorage.task = JSON.stringify(array);      // met array dans local
     inputTask.value = '';                           // vide le input
     inputTask.removeAttribute("placeholder");       // supprime le placeholde
-    document.querySelector('.button-delete-all').removeAttribute('hidden');
+    document.querySelector('.button-delete-all').classList.remove('invisible');
+    // showRandomTask();
 }
 
 
@@ -83,13 +87,15 @@ tasksList.querySelectorAll('.checkbox').forEach(item => {
     })
 })
 
-
 // Change l'état d'une tâche
 function changeStateTask(item) {
     const array = JSON.parse(localStorage.task);
     for (let i = 0; i < array.length; i++) {
         if (array[i].id === parseInt(item.id)) {
             array[i].isDone = item.checked ? true : false;
+            item.checked ?
+                item.nextElementSibling.classList.add('text-slate-400', 'line-through') :
+                item.nextElementSibling.classList.remove('text-slate-400', 'line-through');
             break;
         }
     }
@@ -117,7 +123,7 @@ function deleteTask(item) {
     if (!tasksList.firstElementChild) {
         localStorage.removeItem('task');
         tasksList.innerHTML = noTaskMessage;
-        document.querySelector('.button-delete-all').setAttribute('hidden', '');
+        document.querySelector('.button-delete-all').classList.add('invisible');
     }
 }
 
@@ -132,5 +138,5 @@ document.querySelector('.button-delete-all').addEventListener('click', function 
 function deleteAllTask() {
     localStorage.removeItem("task");
     tasksList.innerHTML = noTaskMessage;
-    document.querySelector('.button-delete-all').setAttribute('hidden', '');
+    document.querySelector('.button-delete-all').classList.add('invisible');
 }

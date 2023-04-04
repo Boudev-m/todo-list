@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://bouimust.github.io/todo-list/favicon.png" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <!-- My Tailwind custom -->
     <script>
         tailwind.config = {
@@ -16,42 +17,60 @@
                 extend: {
                     colors: {
                         sky: '#bdd4f0',
-                        blue: '#3f7bc2'
+                        blue: '#3f7bc2',
+                        red: '#ce0000'
                     },
                     borderWidth: {
                         '10': '10px'
+                    },
+                    maxWidth: {
+                        '40': '40px'
                     }
                 }
             }
         }
     </script>
     <!-- <link rel="stylesheet" href="./home.css" /> -->
-    <title>Todo List</title>
+    <title>Liste de tâches</title>
 </head>
 
-<body class="bg-sky font-sans font-bold m-0 p-0">
+<body class="bg-sky font-sans m-0 p-0">
     <div class="flex">
-        <div class="bg-slate-100 text-blue w-1/2 p-6 rounded-2xl m-auto">
-            <div class="flex flex-wrap items-center justify-center border-10 border-sky rounded-2xl p-3">
-                <img class='max-w-xs' src="./todo_list_logo.png" alt="logo de l'application">
-                <h1 class='text-3xl font-bold underline text-blue'>Todo List</h1>
-                <img src="./todo_list_logo.png" alt="logo de l'application">
-            </div>
 
-            <div class="tasks">
-            </div>
-            <div class="container-button-delete-all">
-                <button type="submit" class="button-delete-all" hidden>Tout supprimer</button>
-            </div>
-            <div class="new-task">
-                <p>
-                    Entrer une nouvelle tâche :
-                </p>
-                <form id="taskForm">
-                    <label><input class="input-task" /></label>
-                    <button type="submit" class="button-task">Valider</button>
-                </form>
-            </div>
+        <div class="bg-slate-100 text-blue m-auto w-full sm:w-11/12 sm:rounded-2xl md:p-6 lg:w-4/5 xl:w-4/6">
+
+            <!-- HEADER BLOCK -->
+            <header
+                class="flex flex-wrap items-center justify-center border-10 border-sky rounded-b-3xl  p-2 md:rounded-2xl md:p-3">
+                <img class='max-w-40' src="./todo_list_logo.png" alt="logo de l'application">
+                <h1 class='text-2xl font-bold text-blue py-0 px-2.5 m-0 md:text-3xl'>Liste de tâches</h1>
+                <img class='max-w-40' src="./todo_list_logo.png" alt="logo de l'application">
+            </header>
+
+
+            <main class="mt-3 md:flex md:flex-row-reverse ">
+                <!-- TASKS BLOCK -->
+                <div class="tasks basis-full text-base p-2.5 md:text-lg ">
+                </div>
+
+                <!-- INPUT BLOCK -->
+                <div class="new-task flex-none text-center max-w-xs m-auto pb-2.5 md:m-0 md:pt-2.5">
+                    <p class="font-semibold py-2">
+                        Entrer une nouvelle tâche :
+                    </p>
+                    <form id="taskForm">
+                        <label><input
+                                class="input-task bg-sky text-gray-900 w-full placeholder-gray-500 border-2 border-blue rounded-md p-2" /></label>
+                        <button type="submit"
+                            class="block button-task bg-blue text-slate-200 w-full m-auto mt-2 opacity-80 rounded-md py-1 px-2.5 hover:text-white hover:opacity-100 transition duration-300">Valider</button>
+                    </form>
+                    <div class="flex pt-2">
+                        <button type="submit"
+                            class="button-delete-all bg-red text-slate-200 w-full m-auto opacity-70 rounded-md py-1 px-2.5 hover:text-white hover:opacity-100 transition duration-300 invisible">Vider
+                            la liste</button>
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
     <script src="home.js"></script>

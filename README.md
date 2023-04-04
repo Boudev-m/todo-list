@@ -2,7 +2,7 @@
 
 Ce projet a pour but de créer à l'intention de l'utilisateur une application qui va lui permettre de gérer les tâches du quotidien.  
   
-**Lien vers l'app : https://bouimust.github.io/todo-list/home**
+**Lien vers l'app : https://bouimust.github.io/todo-list/**
 
 **Langages utilisés** :
 ``HTML / CSS / Javascript``  

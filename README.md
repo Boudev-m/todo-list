@@ -5,8 +5,8 @@ Ce projet a pour but de créer à l'intention de l'utilisateur une application q
 **Lien vers l'app : https://bouimust.github.io/todo-list/home**
 
 **Langages utilisés** :
-``HTML / CSS / Javascript``
-Mis à jour du 04/04/2023 : utilisation de ``Tailwind Css``
+``HTML / CSS / Javascript``  
+Mis à jour du 04/04/2023 : utilisation du framework ``Tailwind Css`` 
 
 **Fonctionnalités de l'application** :  
 - créer une tâche

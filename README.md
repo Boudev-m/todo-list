@@ -20,7 +20,7 @@ Mis à jour du 04/04/2023 : utilisation de ``Tailwind Css``
 - date limite d'accomplissement d'une tâche (option facultative)
 
 **Aperçu** :  
-<img src="https://i.ibb.co/k3nYWfW/todo-list.jpg" width="500px">
+<img src="https://i.ibb.co/f8hvGkv/todo-list.jpg" width="500px">
 
 **Aperçu (ancienne version)** :  
 <img src="https://i.ibb.co/SNqYQbN/todolist.png" width="500px">

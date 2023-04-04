@@ -23,7 +23,7 @@ function showAllTasks(tasks) {
         const task = document.createElement('p');                       // créer <p>
         task.innerHTML = `<button type="submit" class="delete-button bg-red text-slate-200 text-sm m-auto opacity-70 rounded-md pb-0.5 px-1 hover:text-white hover:opacity-100 transition duration-300">Supprimer</button>
         <input id=${tasks[i].id} class="checkbox h-6 w-6 rounded-full shadow cursor-pointer focus:ring-0" type="checkbox" ${tasks[i].isDone ? "checked" : ""} />
-        <label for=${tasks[i].id} class='break-words cursor-pointer'>${tasks[i].name}</label>`;            // met le task name dedans
+        <label for=${tasks[i].id} class='break-all cursor-pointer'>${tasks[i].name}</label>`;            // met le task name dedans
         task.classList.add('m-0', 'pb-1', 'pt-1', 'px-2', 'hover:bg-slate-300', 'transition', 'duration-150', 'cursor-default', 'md:pb-2');
         task.querySelector('input').checked ? task.querySelector('label').classList.add('text-slate-400', 'line-through') : '';
         tasksList.appendChild(task);                                    // ajoute <p> dans la liste
@@ -66,7 +66,7 @@ function addNewTask(task) {
     newTask.classList.add('m-0', 'pb-2', 'pt-1', 'px-2', 'hover:bg-slate-300', 'transition', 'duration-150', 'cursor-default');
     newTask.innerHTML = `<button type="submit" class="delete-button bg-red text-slate-200 text-sm m-auto opacity-70 rounded-md pb-0.5 px-1 hover:text-white hover:opacity-100 transition duration-300">Supprimer</button>
     <input id=${taskObject.id} class="checkbox h-6 w-6 rounded-full shadow cursor-pointer focus:ring-0" type="checkbox" />
-    <label for=${taskObject.id} class='break-words cursor-pointer'></label>`;       // met le checkbox et task name dedans
+    <label for=${taskObject.id} class='break-all cursor-pointer'></label>`;       // met le checkbox et task name dedans
     newTask.lastChild.textContent = task;           // insère le texte brut dans le label
     newTask.firstChild.addEventListener('click', e => { deleteTask(e.target) });
     newTask.children[1].addEventListener('change', e => { changeStateTask(e.target) });
